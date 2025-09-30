@@ -12,6 +12,24 @@ Watch the analysis walkthrough here:
 
 ---
 
+## 📊 Dataset
+
+The dataset used in this project is an **Energy Consumption dataset** provided in **Parquet (`.parquet`)** format:  
+
+👉 https://drive.google.com/file/d/15paolMz3mbswXbdSYK6bLMOIA45VAcj1/view?usp=sharing
+
+### Key Columns
+- `Hour` → hour of the day (0–23)
+- `DayOfWeek` → day index (0=Monday, 6=Sunday)
+- `Holiday` → binary indicator (holiday / not holiday)
+- `LightingUsage` → lighting power usage
+- `Occupancy` → number of people present
+- `EnergyConsumption` → target variable (total energy consumed)
+
+The dataset is structured for **time-based regression**, where engineered features like `Hour_sin`, `Hour_cos`, and `Month_cos` are also included during preprocessing.
+
+---
+
 ## ✨ Highlights
 - Tabular regression with **Keras** (Sequential & Functional)
 - Time features: `Hour`, `DayOfWeek`, `Holiday`, `LightingUsage`, `Occupancy`,
@@ -47,9 +65,6 @@ If you plan to run Keras Tuner, keep the keras-tuner dependency in requirements.
 ```
 jupyter notebook notebook/EnergyConsumptionForecasting.ipynb
 ```
-Place your dataset (CSV) under data/ and adjust the path inside the notebook if needed, e.g.:
-```
-df = pd.read_csv("data/energy_consumption.csv")
-```
+
 
 
