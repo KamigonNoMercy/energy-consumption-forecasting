@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Envs
+.venv/
+venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/*
+!data/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports (keep if you want them in repo)
+# reports/*
